@@ -4,6 +4,8 @@ This app checks for a NFC tag that it is from the manufacturer NXP.
 
 The second check is on the type of card, it can detect a NTAG of type NTAG213, NTAG215 or NTAG216.
 
+The app does not implement a type checking for the other tag types named in the answer.
+
 The source is based on a stackoverflow.com answer:  
 https://stackoverflow.com/questions/37002498/distinguish-ntag213-from-mf0icu2
 ```plaintext
@@ -29,8 +31,8 @@ that it is a first generation tag (MIFARE Ultralight, Ultralight C, NTAG203).
 
 If the tag is an EV1 tag, you can continue by analyzing the resonse to the 
 GET_VERSION command. This will reveal the product type (NTAG or Ultralight EV1) as 
-well as product subtype, product version and storage size (which allows you to determine 
-the exact chip type:
+well as product subtype, product version and storage size (which allows you to 
+determine the exact chip type:
 
 +------------+------+---------+-----------+--------------+
 | Chip       | Type | Subtype | Version   | Storage size |
